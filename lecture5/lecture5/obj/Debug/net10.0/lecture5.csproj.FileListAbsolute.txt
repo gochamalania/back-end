@@ -1,0 +1,15 @@
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\bin\Debug\net10.0\lecture5.exe
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\bin\Debug\net10.0\lecture5.deps.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\bin\Debug\net10.0\lecture5.runtimeconfig.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\bin\Debug\net10.0\lecture5.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\bin\Debug\net10.0\lecture5.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.AssemblyInfoInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.AssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.csproj.CoreCompileInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.sourcelink.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\refint\lecture5.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\lecture5.genruntimeconfig.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\lecture5\lecture5\obj\Debug\net10.0\ref\lecture5.dll
