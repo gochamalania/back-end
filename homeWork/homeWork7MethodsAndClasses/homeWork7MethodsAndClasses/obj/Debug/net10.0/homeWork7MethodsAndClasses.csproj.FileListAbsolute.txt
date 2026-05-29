@@ -1,0 +1,5 @@
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork7MethodsAndClasses\homeWork7MethodsAndClasses\obj\Debug\net10.0\homeWork7MethodsAndClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork7MethodsAndClasses\homeWork7MethodsAndClasses\obj\Debug\net10.0\homeWork7MethodsAndClasses.AssemblyInfoInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork7MethodsAndClasses\homeWork7MethodsAndClasses\obj\Debug\net10.0\homeWork7MethodsAndClasses.AssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork7MethodsAndClasses\homeWork7MethodsAndClasses\obj\Debug\net10.0\homeWork7MethodsAndClasses.csproj.CoreCompileInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork7MethodsAndClasses\homeWork7MethodsAndClasses\obj\Debug\net10.0\homeWork7MethodsAndClasses.sourcelink.json
