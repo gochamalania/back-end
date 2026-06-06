@@ -1,0 +1,15 @@
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.AssemblyInfoInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.AssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.csproj.CoreCompileInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.sourcelink.json
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\bin\Debug\net10.0\lecture7.exe
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\bin\Debug\net10.0\lecture7.deps.json
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\bin\Debug\net10.0\lecture7.runtimeconfig.json
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\bin\Debug\net10.0\lecture7.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\bin\Debug\net10.0\lecture7.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\refint\lecture7.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\lecture7.genruntimeconfig.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\lecture7\lecture7\obj\Debug\net10.0\ref\lecture7.dll
