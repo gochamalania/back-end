@@ -1,0 +1,15 @@
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\bin\Debug\net10.0\homeWork10.exe
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\bin\Debug\net10.0\homeWork10.deps.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\bin\Debug\net10.0\homeWork10.runtimeconfig.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\bin\Debug\net10.0\homeWork10.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\bin\Debug\net10.0\homeWork10.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.AssemblyInfoInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.AssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.csproj.CoreCompileInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.sourcelink.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\refint\homeWork10.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\homeWork10.genruntimeconfig.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\homeWork10\homeWork10\obj\Debug\net10.0\ref\homeWork10.dll
