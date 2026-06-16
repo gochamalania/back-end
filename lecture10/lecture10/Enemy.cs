@@ -19,4 +19,6 @@ public class Enemy : Sprite
     {
         Console.WriteLine("Enemy");
     }
+
+    
 }
