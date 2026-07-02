@@ -106,6 +106,12 @@ class Program
         {
             Console.WriteLine(item.Name);
         }
+        
+        ArrayHelper.Add<Inventory>(ref player.Inventory, inventory);
+        foreach (var item in player.Inventory)
+        {
+            Console.WriteLine(item.Name);
+        }
 
 
     }
