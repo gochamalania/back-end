@@ -1,6 +1,6 @@
 ﻿namespace lecture14.Helpers;
 
-public class ArrayHealper
+public class ArrayHelper
 {
     public static T[] Add<T>( ref T[] inventoryList, T newInventory)
     {
