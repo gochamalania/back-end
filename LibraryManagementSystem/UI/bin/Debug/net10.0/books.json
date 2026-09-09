@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "1",
+    "Title": "Give to Grow",
+    "Author": "Mo Bunnell",
+    "ISBN": "145-332",
+    "TotalCopies": 4,
+    "AvailableCopies": 4
+  },
+  {
+    "Id": "2",
+    "Title": "Recruiting Top Sales Talent",
+    "Author": "Henry Glickel",
+    "ISBN": "3131",
+    "TotalCopies": 5,
+    "AvailableCopies": 5
+  },
+  {
+    "Id": "3",
+    "Title": "A mind for sales",
+    "Author": "Mark Hunter",
+    "ISBN": "1234-532",
+    "TotalCopies": 6,
+    "AvailableCopies": 6
+  },
+  {
+    "Id": "4",
+    "Title": "test1",
+    "Author": "authorTest",
+    "ISBN": "111222",
+    "TotalCopies": 4,
+    "AvailableCopies": 3
+  },
+  {
+    "Id": "5",
+    "Title": "added by",
+    "Author": "super admin",
+    "ISBN": "234-2333",
+    "TotalCopies": 2,
+    "AvailableCopies": 2
+  },
+  {
+    "Id": "6",
+    "Title": "The Great Gatsby",
+    "Author": "F. Scott Fitzgerald",
+    "ISBN": "444555",
+    "TotalCopies": 3,
+    "AvailableCopies": 2
+  },
+  {
+    "Id": "7",
+    "Title": "To Kill a Mockingbird",
+    "Author": "Harper Lee",
+    "ISBN": "9873-334",
+    "TotalCopies": 4,
+    "AvailableCopies": 4
+  },
+  {
+    "Id": "8",
+    "Title": "adminBook",
+    "Author": "added by admin",
+    "ISBN": "33220",
+    "TotalCopies": 2,
+    "AvailableCopies": 2
+  },
+  {
+    "Id": "9",
+    "Title": "test1234",
+    "Author": "test123445566",
+    "ISBN": "324-456",
+    "TotalCopies": 5,
+    "AvailableCopies": 5
+  }
+]

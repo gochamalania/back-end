@@ -1,0 +1,341 @@
+IF DB_ID('UNIVERSITY') IS NULL
+BEGIN
+	CREATE DATABASE UNIVERSITY;
+END
+GO
+
+USE UNIVERSITY;
+
+GO
+
+
+--DELETE OLD TABLES
+DROP TABLE IF EXISTS ENROLLMENTS;
+DROP TABLE IF EXISTS COURSES;
+DROP TABLE IF EXISTS STUDENT_DETAILS;
+DROP TABLE IF EXISTS STUDENTS;
+DROP TABLE IF EXISTS FACULTY;
+
+
+
+-- FACULTY
+CREATE TABLE FACULTY
+(
+	DepartmentID INT PRIMARY KEY IDENTITY(1,1),
+	DepartmentName NVARCHAR(100) NOT NULL UNIQUE,
+);
+
+GO
+
+
+-- STUDENTS
+
+CREATE TABLE STUDENTS
+(
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+
+    Age INT NOT NULL
+        CHECK (Age BETWEEN 18 AND 100),
+
+    GPA DECIMAL(3,2)
+        CHECK (GPA BETWEEN 0.00 AND 4.00),
+
+    IsActive BIT DEFAULT(1),
+    RegisteredAt DATETIME2 DEFAULT(SYSDATETIME()),
+    PhoneNumber VARCHAR(20) NULL,
+    DepartmentID INT NULL,
+
+    CONSTRAINT FK_STUDENTS_FACULTY
+        FOREIGN KEY (DepartmentID)
+        REFERENCES FACULTY(DepartmentID)
+);
+GO
+
+
+-- STUDENT_DETAILS
+-- ONE TO ONE
+
+CREATE TABLE STUDENT_DETAILS
+(
+    StudentID INT PRIMARY KEY,
+    Adress NVARCHAR(200) NULL,
+    PassportNumber VARCHAR(50) NOT NULL UNIQUE,
+    DateOfBirth DATE NULL,
+
+    CONSTRAINT FK_STUDENT_DETAILS_STUDENTS
+        FOREIGN KEY (StudentID)
+        REFERENCES STUDENTS(ID)
+);
+GO
+
+
+-- INSTRUCTORS
+
+CREATE TABLE INSTRUCTORS
+(
+    InstructorID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+);
+GO
+
+
+--COURSES
+--ONE TO MANY
+
+CREATE TABLE COURSES 
+(
+    CourseID INT PRIMARY KEY IDENTITY(1,1),
+    CourseTitle NVARCHAR(100) NOT NULL,
+
+    Credits INT NOT NULL
+        CHECK (Credits BETWEEN 1 AND 6),
+        
+    InstructorID INT NOT NULL,
+
+    CONSTRAINT FK_COURSES_INSTRUCTORS
+        FOREIGN KEY (InstructorID)
+        REFERENCES INSTRUCTORS(InstructorID)
+);
+GO
+
+
+-- ENROLLMENTS
+-- MANY TO MANY
+CREATE TABLE ENROLLMENTS 
+(
+    EnrollmentID INT PRIMARY KEY IDENTITY(1,1),
+    StudentID INT NOT NULL,
+    CourseID INT NOT NULL,
+
+    EnrollmentDate DATETIME2 DEFAULT(SYSDATETIME()),
+    Grade DECIMAL(3,2) NULL
+        CHECK (Grade BETWEEN 0.00 AND 4.00),
+
+    CONSTRAINT FK_ENROLLMENTS_STUDENTS
+        FOREIGN KEY (StudentID)
+        REFERENCES STUDENTS(ID),
+
+    CONSTRAINT FK_ENROLLMENTS_COURSES
+        FOREIGN KEY (CourseID)
+        REFERENCES COURSES(CourseID),
+
+    CONSTRAINT UQ_ENROLLMENTS_StudentID_CourseID
+        UNIQUE (StudentID, CourseID)
+);
+GO
+
+
+
+
+-- DATA
+-- FACULTIES
+
+INSERT INTO FACULTY (DepartmentName) VALUES
+('Computer Science'),
+('Mathematics'),
+('Physics'),
+('Chemistry'),
+('Biology');
+GO
+
+SELECT * FROM FACULTY;
+
+
+
+--STUDENTS
+INSERT INTO STUDENTS 
+(
+    FirstName,
+    Email,
+    Age,
+    GPA,
+    IsActive,
+    PhoneNumber,
+    DepartmentID
+) 
+VALUES
+('Alice', 'alice@example.com', 20, 3.8, 1, '123-456-7890', 1),
+('Bob', 'bob@example.com', 22, 3.5, 1, '098-765-4321', 2),
+('Charlie', 'charlie@example.com', 21, 3.9, 1, '555-123-4567', 3),
+('John', 'john@example.com', 19, 3.2, 1, '555-987-6543', 1),
+('Jane', 'jane@example.com', 20, 3.6, 1, '555-567-8901', 2)
+
+GO
+
+SELECT * FROM STUDENTS;
+
+
+--STUDENT PROFILES
+INSERT INTO STUDENT_DETAILS 
+(
+    StudentID,
+    Adress,
+    PassportNumber,
+    DateOfBirth
+) 
+VALUES
+(1, '123 Main St', 'A1234567', '2003-01-15'),
+(2, '456 Elm St', 'B2345678', '2001-05-22'),
+(3, '789 Oak St', 'C3456789', '2002-09-10'),
+(4, '321 Pine St', 'D4567890', '2004-03-05'),
+(5, '654 Maple St', 'E5678901', '2003-07-18');
+GO
+
+SELECT * FROM STUDENT_DETAILS;
+
+
+
+--INSTUCTORS
+INSERT INTO INSTRUCTORS 
+(
+    FirstName,
+    LastName,
+    Email
+)
+VALUES 
+('Dr. Smith', 'Johnson', 'Smith@example.com'),
+('Dr. Brown', 'Williams', 'Brown@example.com'),
+('Dr. Jones', 'Davis', 'Jones@example.com');
+GO
+
+SELECT * FROM INSTRUCTORS;
+
+
+
+--COURSES
+INSERT INTO COURSES 
+(
+    CourseTitle,
+    Credits,
+    InstructorID
+)
+VALUES 
+('Introduction to Computer Science', 3, 1),
+('Calculus I', 4, 2),
+('Physics I', 4, 3),
+('Chemistry I', 4, 2),
+('Biology I', 3, 1);
+GO
+
+SELECT * FROM COURSES;
+
+
+--ENROLLMENTS
+INSERT INTO ENROLLMENTS 
+(
+    StudentID,
+    CourseID,
+    Grade
+)
+VALUES 
+(1, 1, 3.8),
+(1, 2, 3.5),
+(2, 2, 3.9),
+(2, 3, 3.2),
+(3, 1, 3.6),
+(4, 4, 3.7),
+(5, 5, 3.4);
+GO
+
+--CHECK DATA
+SELECT * FROM FACULTY;
+SELECT * FROM STUDENTS;
+SELECT * FROM STUDENT_DETAILS;
+SELECT * FROM INSTRUCTORS;
+SELECT * FROM COURSES;
+SELECT * FROM ENROLLMENTS;
+GO
+
+
+
+--ALL STUDENTS WITH FACULTY
+SELECT 
+    S.ID,
+    S.FirstName,
+    S.Email,
+    F.DepartmentName
+    FROM STUDENTS S
+    LEFT JOIN FACULTY F ON S.DepartmentID = F.DepartmentID;
+GO
+
+
+-- COURSES WITH INSTRUCTORS
+SELECT 
+    C.CourseID,
+    C.CourseTitle,
+    C.Credits,
+    I.FirstName AS InstructorFirstName,
+    I.LastName AS InstructorLastName
+    
+FROM COURSES C
+LEFT JOIN INSTRUCTORS I ON C.InstructorID = I.InstructorID;
+
+GO
+
+
+-- STUDENTS WITH GPA GREATER THAN 3.00
+SELECT
+    S.FirstName,
+    SD.PassportNumber
+
+FROM STUDENTS S
+INNER JOIN STUDENT_DETAILS SD ON S.ID = SD.StudentID
+WHERE S.GPA > 3.00;
+GO
+
+
+-- STUDENTS + COURSES + GRADES
+SELECT 
+    S.FirstName,
+    C.CourseTitle,
+    E.Grade
+FROM ENROLLMENTS E
+INNER JOIN STUDENTS S ON E.StudentID = S.ID
+INNER JOIN COURSES C ON E.CourseID = C.CourseID;
+GO
+
+
+-- EACH STUDENTS AVERAGE GRADE
+SELECT 
+    S.FirstName,
+    AVG(E.Grade) AS AverageGrade
+FROM STUDENTS S
+INNER JOIN ENROLLMENTS E ON S.ID = E.StudentID
+GROUP BY S.FirstName;
+GO
+
+
+
+-- HOW MANY STUDENTS IN EACH COURSE
+SELECT 
+    C.CourseTitle,
+    COUNT(E.StudentID) AS NumberOfStudents
+FROM COURSES C
+LEFT JOIN ENROLLMENTS E ON C.CourseID = E.CourseID
+GROUP BY C.CourseTitle;
+GO
+
+
+-- STUDENTS WITH NO ENROLLMENTS
+SELECT 
+    S.FirstName
+FROM STUDENTS S
+LEFT JOIN ENROLLMENTS E ON S.ID = E.StudentID
+WHERE E.StudentID IS NULL;
+GO
+
+-- HIGHEST GPA
+SELECT 
+    S.FirstName,
+    C.CourseTitle
+FROM STUDENTS S
+INNER JOIN ENROLLMENTS E ON S.ID = E.StudentID
+INNER JOIN COURSES C ON E.CourseID = C.CourseID
+WHERE S.GPA = (SELECT MAX(GPA) FROM STUDENTS);
+GO
+
+
