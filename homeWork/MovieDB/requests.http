@@ -1,0 +1,82 @@
+﻿### 1. Get all actors
+GET http://localhost:5112/api/actors
+
+
+### 2. Get actor by ID
+GET http://localhost:5112/api/actors/2
+
+
+### 3. Create actor
+POST http://localhost:5112/api/actors
+Content-Type: application/json
+
+{
+  "firstName": "Final",
+  "lastName": "TestActor"
+}
+
+
+### 4. Update actor
+PUT http://localhost:5112/api/actors/4
+Content-Type: application/json
+
+{
+  "firstName": "Final Updated",
+  "lastName": "TestActor Updated"
+}
+
+
+### 5. Get updated actor
+GET http://localhost:5112/api/actors/4
+
+
+### 6. Test invalid actor ID
+GET http://localhost:5112/api/actors/9999
+
+
+### 7. Get actors assigned to movie
+GET http://localhost:5112/api/movies/2/actors
+
+
+### 8. Add actor to movie
+POST http://localhost:5112/api/movies/2/actors/4
+
+
+### 9. Get movie actors
+GET http://localhost:5112/api/movies/2/actors
+
+
+### 10. Add second actor to movie
+POST http://localhost:5112/api/movies/2/actors/3
+
+
+### 11. Get movie actors
+GET http://localhost:5112/api/movies/2/actors
+
+
+### 12. Test duplicate actor assignment
+POST http://localhost:5112/api/movies/2/actors/4
+
+
+### 13. Remove actor from movie
+DELETE http://localhost:5112/api/movies/2/actors/4
+
+
+### 14. Get movie actors after remove
+GET http://localhost:5112/api/movies/2/actors
+
+
+### 15. Remove second actor from movie
+DELETE http://localhost:5112/api/movies/2/actors/3
+
+
+### 16. Get movie actors after removing all
+GET http://localhost:5112/api/movies/2/actors
+
+
+### 17. Delete test actor
+DELETE http://localhost:5112/api/actors/4
+
+
+### 18. Verify deleted actor
+GET http://localhost:5112/api/actors/4

@@ -1,0 +1,75 @@
+﻿using Microsoft.EntityFrameworkCore;
+using MovieDB.Application.Interfaces;
+using MovieDB.Domain.Entities;
+using MovieDB.Infrastructure.Data;
+
+namespace MovieDB.Infrastructure.Repositories;
+
+public class MovieRepository : IMovieRepository
+{
+    private readonly MovieDbContext _context;
+
+    public MovieRepository(MovieDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task<List<Movie>> GetAllAsync()
+    {
+        return await _context.Movies
+            .AsNoTracking()
+            .ToListAsync();
+    }
+
+    public async Task<Movie?> GetByIdAsync(int id)
+    {
+        return await _context.Movies
+            .AsNoTracking()
+            .FirstOrDefaultAsync(m => m.Id == id);
+    }
+
+    public async Task<Movie> CreateAsync(Movie movie)
+    {
+        _context.Movies.Add(movie);
+
+        await _context.SaveChangesAsync();
+
+        return movie;
+    }
+
+    public async Task<bool> UpdateAsync(Movie movie)
+    {
+        var existingMovie = await _context.Movies
+            .FirstOrDefaultAsync(m => m.Id == movie.Id);
+
+        if (existingMovie == null)
+        {
+            return false;
+        }
+
+        existingMovie.Title = movie.Title;
+        existingMovie.ReleaseYear = movie.ReleaseYear;
+        existingMovie.StudioId = movie.StudioId;
+
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
+
+    public async Task<bool> DeleteAsync(int id)
+    {
+        var movie = await _context.Movies
+            .FirstOrDefaultAsync(m => m.Id == id);
+
+        if (movie == null)
+        {
+            return false;
+        }
+
+        _context.Movies.Remove(movie);
+
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
+}

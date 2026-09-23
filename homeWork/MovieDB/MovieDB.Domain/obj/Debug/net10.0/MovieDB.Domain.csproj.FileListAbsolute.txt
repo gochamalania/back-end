@@ -1,0 +1,12 @@
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\bin\Debug\net10.0\MovieDB.Domain.deps.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\bin\Debug\net10.0\MovieDB.Domain.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\bin\Debug\net10.0\MovieDB.Domain.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.AssemblyInfoInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.AssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.sourcelink.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\refint\MovieDB.Domain.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\MovieDB.Domain.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Domain\obj\Debug\net10.0\ref\MovieDB.Domain.dll

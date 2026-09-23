@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDB.Domain", "MovieDB.Domain\MovieDB.Domain.csproj", "{5E54BDAC-483E-45C8-83B5-D1A31E097125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDB.Application", "MovieDB.Application\MovieDB.Application.csproj", "{AC2B222A-FCA8-46DC-8ADA-FB9D2EB949AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDB.Infrastructure", "MovieDB.Infrastructure\MovieDB.Infrastructure.csproj", "{3CFD085B-EB58-4240-AB92-E80ED84DA413}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDB.API", "MovieDB.API\MovieDB.API.csproj", "{E537C3E4-8BED-4AEB-AB13-0FAEE95E94E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E54BDAC-483E-45C8-83B5-D1A31E097125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E54BDAC-483E-45C8-83B5-D1A31E097125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E54BDAC-483E-45C8-83B5-D1A31E097125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E54BDAC-483E-45C8-83B5-D1A31E097125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2B222A-FCA8-46DC-8ADA-FB9D2EB949AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2B222A-FCA8-46DC-8ADA-FB9D2EB949AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2B222A-FCA8-46DC-8ADA-FB9D2EB949AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2B222A-FCA8-46DC-8ADA-FB9D2EB949AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CFD085B-EB58-4240-AB92-E80ED84DA413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CFD085B-EB58-4240-AB92-E80ED84DA413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CFD085B-EB58-4240-AB92-E80ED84DA413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CFD085B-EB58-4240-AB92-E80ED84DA413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E537C3E4-8BED-4AEB-AB13-0FAEE95E94E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E537C3E4-8BED-4AEB-AB13-0FAEE95E94E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E537C3E4-8BED-4AEB-AB13-0FAEE95E94E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E537C3E4-8BED-4AEB-AB13-0FAEE95E94E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

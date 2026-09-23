@@ -1,0 +1,16 @@
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\bin\Debug\net10.0\MovieDB.Application.deps.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\bin\Debug\net10.0\MovieDB.Application.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\bin\Debug\net10.0\MovieDB.Application.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\bin\Debug\net10.0\MovieDB.Domain.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\bin\Debug\net10.0\MovieDB.Domain.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.csproj.AssemblyReference.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.AssemblyInfoInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.AssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.csproj.CoreCompileInputs.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.sourcelink.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB..D42FAA34.Up2Date
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\refint\MovieDB.Application.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\MovieDB.Application.pdb
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.Application\obj\Debug\net10.0\ref\MovieDB.Application.dll
