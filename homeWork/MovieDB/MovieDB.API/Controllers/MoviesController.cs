@@ -185,4 +185,86 @@ public class MoviesController : ControllerBase
 
         return NoContent();
     }
+
+    // ===============================
+    // დავალება 1
+    // ===============================
+
+    [HttpGet("search-by-studio")]
+    public async Task<ActionResult<List<MovieDto>>> SearchByStudio(
+        int year,
+        string studioName,
+        int minimumActorCount)
+    {
+        var movies = await _movieService.SearchMoviesByStudioAsync(
+            year,
+            studioName,
+            minimumActorCount);
+
+        var result = movies.Select(m => new MovieDto
+        {
+            Id = m.Id,
+            Title = m.Title,
+            ReleaseYear = m.ReleaseYear,
+            StudioId = m.StudioId
+        }).ToList();
+
+        return Ok(result);
+    }
+
+    // ===============================
+    // დავალება 2
+    // ===============================
+
+    [HttpGet("search-by-country")]
+    public async Task<ActionResult<List<MovieDto>>> SearchByCountry(
+        string countryName,
+        int minimumYear,
+        int maximumActorCount)
+    {
+        var movies = await _movieService.SearchMoviesByCountryAsync(
+            countryName,
+            minimumYear,
+            maximumActorCount);
+
+        var result = movies.Select(m => new MovieDto
+        {
+            Id = m.Id,
+            Title = m.Title,
+            ReleaseYear = m.ReleaseYear,
+            StudioId = m.StudioId
+        }).ToList();
+
+        return Ok(result);
+    }
+
+    // ===============================
+    // დავალება 3
+    // ===============================
+
+    [HttpGet("search-advanced")]
+    public async Task<ActionResult<List<MovieDto>>> SearchAdvanced(
+        int fromYear,
+        int toYear,
+        string countryName,
+        string titleText,
+        int minimumActorCount)
+    {
+        var movies = await _movieService.SearchMoviesAdvancedAsync(
+            fromYear,
+            toYear,
+            countryName,
+            titleText,
+            minimumActorCount);
+
+        var result = movies.Select(m => new MovieDto
+        {
+            Id = m.Id,
+            Title = m.Title,
+            ReleaseYear = m.ReleaseYear,
+            StudioId = m.StudioId
+        }).ToList();
+
+        return Ok(result);
+    }
 }

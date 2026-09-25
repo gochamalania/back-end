@@ -72,4 +72,73 @@ public class MovieRepository : IMovieRepository
 
         return true;
     }
+
+    
+
+    public async Task<List<Movie>> SearchMoviesByStudioAsync(
+        int year,
+        string studioName,
+        int minimumActorCount)
+    {
+        return await _context.Movies
+            .AsNoTracking()
+            .Include(m => m.Studio)
+            .Include(m => m.Actors)
+            .Where(m =>
+                m.ReleaseYear >= year &&
+                m.Studio.Name == studioName &&
+                m.Actors.Count >= minimumActorCount)
+            .OrderByDescending(m => m.ReleaseYear)
+            .ThenBy(m => m.Title)
+            .ToListAsync();
+    }
+
+    
+
+    public async Task<List<Movie>> SearchMoviesByCountryAsync(
+        string countryName,
+        int minimumYear,
+        int maximumActorCount)
+    {
+        return await _context.Movies
+            .AsNoTracking()
+            .Include(m => m.Studio)
+                .ThenInclude(s => s.Country)
+            .Include(m => m.Actors)
+            .Where(m =>
+                m.Studio.Country.Name == countryName &&
+                m.ReleaseYear >= minimumYear &&
+                m.Actors.Count <= maximumActorCount)
+            .OrderBy(m => m.Actors.Count)
+            .ThenByDescending(m => m.ReleaseYear)
+            .ThenBy(m => m.Title)
+            .ToListAsync();
+    }
+
+    
+
+    public async Task<List<Movie>> SearchMoviesAdvancedAsync(
+        int fromYear,
+        int toYear,
+        string countryName,
+        string titleText,
+        int minimumActorCount)
+    {
+        return await _context.Movies
+            .AsNoTracking()
+            .Include(m => m.Studio)
+                .ThenInclude(s => s.Country)
+            .Include(m => m.Actors)
+            .Where(m =>
+                m.ReleaseYear >= fromYear &&
+                m.ReleaseYear <= toYear &&
+                m.Studio.Country.Name == countryName &&
+                m.Title.Contains(titleText) &&
+                m.Actors.Count >= minimumActorCount)
+            .OrderByDescending(m => m.Actors.Count)
+            .ThenByDescending(m => m.ReleaseYear)
+            .ThenBy(m => m.Studio.Name)
+            .ThenBy(m => m.Title)
+            .ToListAsync();
+    }
 }

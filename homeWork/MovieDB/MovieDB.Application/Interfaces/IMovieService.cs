@@ -9,4 +9,22 @@ public interface IMovieService
     Task<Movie> CreateAsync(Movie movie);
     Task<bool> UpdateAsync(Movie movie);
     Task<bool> DeleteAsync(int id);
+
+    // Search methods
+    Task<List<Movie>> SearchMoviesByStudioAsync(
+        int year,
+        string studioName,
+        int minimumActorCount);
+
+    Task<List<Movie>> SearchMoviesByCountryAsync(
+        string countryName,
+        int minimumYear,
+        int maximumActorCount);
+
+    Task<List<Movie>> SearchMoviesAdvancedAsync(
+        int fromYear,
+        int toYear,
+        string countryName,
+        string titleText,
+        int minimumActorCount);
 }

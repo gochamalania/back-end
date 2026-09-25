@@ -36,4 +36,45 @@ public class MovieService : IMovieService
     {
         return await _movieRepository.DeleteAsync(id);
     }
+
+    // ===============================
+    // Search Methods
+    // ===============================
+
+    public async Task<List<Movie>> SearchMoviesByStudioAsync(
+        int year,
+        string studioName,
+        int minimumActorCount)
+    {
+        return await _movieRepository.SearchMoviesByStudioAsync(
+            year,
+            studioName,
+            minimumActorCount);
+    }
+
+    public async Task<List<Movie>> SearchMoviesByCountryAsync(
+        string countryName,
+        int minimumYear,
+        int maximumActorCount)
+    {
+        return await _movieRepository.SearchMoviesByCountryAsync(
+            countryName,
+            minimumYear,
+            maximumActorCount);
+    }
+
+    public async Task<List<Movie>> SearchMoviesAdvancedAsync(
+        int fromYear,
+        int toYear,
+        string countryName,
+        string titleText,
+        int minimumActorCount)
+    {
+        return await _movieRepository.SearchMoviesAdvancedAsync(
+            fromYear,
+            toYear,
+            countryName,
+            titleText,
+            minimumActorCount);
+    }
 }

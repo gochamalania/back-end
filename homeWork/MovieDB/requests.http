@@ -80,3 +80,20 @@ DELETE http://localhost:5112/api/actors/4
 
 ### 18. Verify deleted actor
 GET http://localhost:5112/api/actors/4
+
+### Get all movies
+GET http://localhost:5112/api/Movies
+
+
+### Search Movies By Studio
+GET http://localhost:5112/api/Movies/search-by-studio?year=2000&studioName=YOUR_STUDIO&minimumActorCount=1
+
+###
+
+### Search Movies By Country
+GET http://localhost:5112/api/Movies/search-by-country?countryName=YOUR_COUNTRY&minimumYear=2000&maximumActorCount=5
+
+###
+
+### Advanced Search
+GET http://localhost:5112/api/Movies/search-advanced?fromYear=2000&toYear=2026&countryName=YOUR_COUNTRY&titleText=YOUR_TITLE&minimumActorCount=1
