@@ -1,0 +1,50 @@
+﻿@page "/Movies/Details"
+@model MovieDB.API.Pages.Movies.DetailsModel
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow movie-details-card">
+                <div class="card-header bg-dark text-white">
+                    <h1 class="h4 mb-0">Movie Details</h1>
+                </div>
+
+                <div class="card-body p-4">
+                    <h2 class="h3 fw-bold mb-4">
+                        @Model.Movie!.Title
+                    </h2>
+
+                    <div class="mb-3 p-3 bg-light rounded">
+                        <div class="text-secondary small">Title</div>
+                        <div class="fw-semibold">@Model.Movie.Title</div>
+                    </div>
+
+                    <div class="mb-3 p-3 bg-light rounded">
+                        <div class="text-secondary small">Release Year</div>
+                        <div class="fw-semibold">@Model.Movie.ReleaseYear</div>
+                    </div>
+
+                    <div class="mb-4 p-3 bg-light rounded">
+                        <div class="text-secondary small">Studio ID</div>
+                        <div class="fw-semibold">@Model.Movie.StudioId</div>
+                    </div>
+                    
+                    <a asp-page="/Movies/Edit"
+                       asp-route-id="@Model.Movie!.Id"
+                       class="btn btn-warning me-2">
+                        Edit Movie
+                    </a>
+
+                    <button type="button"
+                            onclick="window.location.href='/Movies'">
+                        Back to Movies
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

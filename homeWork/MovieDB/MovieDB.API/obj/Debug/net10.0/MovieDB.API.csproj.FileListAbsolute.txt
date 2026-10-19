@@ -170,3 +170,7 @@ C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\bin\Debug\
 C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\obj\Debug\net10.0\MovieDB.API.RazorAssemblyInfo.cache
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\obj\Debug\net10.0\MovieDB.API.RazorAssemblyInfo.cs
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\bin\Debug\net10.0\MovieDB.API.staticwebassets.runtime.json
+C:\Users\gocha\OneDrive\Desktop\back-end\homeWork\MovieDB\MovieDB.API\obj\Debug\net10.0\compressed\crhnj117rr-{0}-p6fk3vaj1n-p6fk3vaj1n.gz

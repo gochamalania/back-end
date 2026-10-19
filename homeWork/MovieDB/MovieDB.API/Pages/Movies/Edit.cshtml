@@ -1,0 +1,90 @@
+﻿
+@page "/Movies/Edit/{id:int}"
+@model MovieDB.API.Pages.Movies.EditModel
+
+@{
+    ViewData["Title"] = "Edit Movie";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white">
+                    <h1 class="h4 mb-0">Edit Movie</h1>
+                </div>
+
+                <div class="card-body p-4">
+                    <form method="post">
+                        <input type="hidden" asp-for="Movie.Id" />
+
+                        <div asp-validation-summary="ModelOnly"
+                             class="text-danger mb-3">
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Movie.Title"
+                                   class="form-label">
+                                Movie Title
+                            </label>
+
+                            <input asp-for="Movie.Title"
+                                   class="form-control"
+                                   maxlength="150" />
+
+                            <span asp-validation-for="Movie.Title"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Movie.ReleaseYear"
+                                   class="form-label">
+                                Release Year
+                            </label>
+
+                            <input asp-for="Movie.ReleaseYear"
+                                   type="number"
+                                   class="form-control" />
+
+                            <span asp-validation-for="Movie.ReleaseYear"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="Movie.StudioId"
+                                   class="form-label">
+                                Studio ID
+                            </label>
+
+                            <input asp-for="Movie.StudioId"
+                                   type="number"
+                                   class="form-control" />
+
+                            <span asp-validation-for="Movie.StudioId"
+                                  class="text-danger">
+                            </span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <form method="post">
+                                <input type="hidden" asp-for="Movie.Id" />
+
+                                <button type="submit" class="btn btn-primary">
+                                    Save Changes
+                                </button>
+                            </form>
+
+                            <a asp-page="/Movies/Details"
+                               asp-route-id="@Model.Movie.Id"
+                               class="btn btn-secondary">
+                                Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
